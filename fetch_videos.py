@@ -41,92 +41,109 @@ def fetch_channel_videos(channel_info, threshold):
     return qualified
 
 def generate_player_html(videos):
-    """Creates a self-contained auto-advancing YouTube player."""
+    """Generates an HTML page with direct YouTube App playlist links."""
     video_ids = [v["id"] for v in videos]
+    
+    # YouTube URL queues support batches of up to 45 IDs per link
+    batch_size = 45
+    playlist_buttons = []
+    for i in range(0, len(video_ids), batch_size):
+        chunk = video_ids[i:i + batch_size]
+        part_num = (i // batch_size) + 1
+        yt_queue_url = f"https://www.youtube.com/watch_videos?video_ids={','.join(chunk)}"
+        playlist_buttons.append(
+            f'<a class="yt-btn" href="{yt_queue_url}" target="_blank">▶ Open Part {part_num} in YouTube App ({len(chunk)} Videos)</a>'
+        )
+
+    buttons_html = "\n".join(playlist_buttons)
+
+    video_items_html = "\n".join([
+        f'<li><a href="{v["url"]}" target="_blank"><b>[{v["channel"]}]</b> {v["title"]}</a> ({v["views"]:,} views)</li>'
+        for v in videos
+    ])
+
     html_content = f"""<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kanerr & Colaws Autoplay</title>
+  <title>Kanerr & Colaws Archive</title>
   <style>
     body {{
       margin: 0;
       background: #0f0f0f;
       color: #fff;
-      font-family: sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      padding: 20px;
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 16px;
     }}
-    #player {{
+    .container {{
+      max-width: 650px;
       width: 100%;
-      max-width: 900px;
-      aspect-ratio: 16 / 9;
-      border: none;
+    }}
+    h1 {{
+      font-size: 1.4rem;
+      margin-bottom: 8px;
+    }}
+    p {{
+      color: #aaa;
+      font-size: 0.95rem;
+    }}
+    .button-group {{
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin: 20px 0;
+    }}
+    .yt-btn {{
+      display: block;
+      text-align: center;
+      background: #cc0000;
+      color: #ffffff;
+      text-decoration: none;
+      padding: 14px 18px;
+      font-size: 1rem;
+      font-weight: bold;
       border-radius: 8px;
     }}
-    .controls {{
-      margin-top: 15px;
-      display: flex;
-      gap: 12px;
+    .yt-btn:hover {{
+      background: #e60000;
     }}
-    button {{
-      background: #cc0000;
-      color: #fff;
-      border: none;
-      padding: 10px 18px;
-      font-size: 16px;
-      border-radius: 6px;
-      cursor: pointer;
+    ul {{
+      list-style: none;
+      padding: 0;
+      margin-top: 20px;
+    }}
+    li {{
+      padding: 10px 0;
+      border-bottom: 1px solid #222;
+      font-size: 0.9rem;
+    }}
+    li a {{
+      color: #3ea6ff;
+      text-decoration: none;
     }}
   </style>
 </head>
 <body>
-  <h2>Kanerr / Colaws (&ge; 80k Views) Archive</h2>
-  <div id="player"></div>
-  <div class="controls">
-    <button onclick="prevVideo()">Previous</button>
-    <button onclick="nextVideo()">Next</button>
+  <div class="container">
+    <h1>Kanerr & Colaws Archive (&ge; 80k Views)</h1>
+    <p>Tap a button below to launch these videos directly into the <b>YouTube App</b> with your account/ad-blocker active and continuous autoplay enabled.</p>
+    
+    <div class="button-group">
+      {buttons_html}
+    </div>
+
+    <h3>All Archived Videos ({len(videos)})</h3>
+    <ul>
+      {video_items_html}
+    </ul>
   </div>
-
-  <script src="https://www.youtube.com/iframe_api"></script>
-  <script>
-    const videoIds = {json.dumps(video_ids)};
-    let currentIndex = 0;
-    let player;
-
-    function onYouTubeIframeAPIReady() {{
-      player = new YT.Player('player', {{
-        videoId: videoIds[0],
-        playerVars: {{ 'autoplay': 1, 'playsinline': 1 }},
-        events: {{
-          'onReady': (e) => e.target.playVideo(),
-          'onStateChange': onPlayerStateChange
-        }}
-      }});
-    }}
-
-    function onPlayerStateChange(event) {{
-      // YT.PlayerState.ENDED is 0: advances immediately to next video
-      if (event.data === 0) {{
-        nextVideo();
-      }}
-    }}
-
-    function nextVideo() {{
-      currentIndex = (currentIndex + 1) % videoIds.length;
-      player.loadVideoById(videoIds[currentIndex]);
-    }}
-
-    function prevVideo() {{
-      currentIndex = (currentIndex - 1 + videoIds.length) % videoIds.length;
-      player.loadVideoById(videoIds[currentIndex]);
-    }}
-  </script>
 </body>
 </html>"""
+
     with open("index.html", "w", encoding="utf-8") as f:
         f.write(html_content)
 
@@ -147,7 +164,7 @@ def main():
         writer.writerows(all_videos)
 
     generate_player_html(all_videos)
-    print("Done! Updated CSV and created index.html autoplay player.")
+    print("Updated CSV and regenerated YouTube player launcher.")
 
 if __name__ == "__main__":
     main()
