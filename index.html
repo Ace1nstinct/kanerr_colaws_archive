@@ -3,82 +3,201 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kanerr & Colaws Autoplay</title>
+  <title>Kanerr & Colaws Archive</title>
   <style>
     body {
       margin: 0;
       background: #0f0f0f;
       color: #fff;
-      font-family: sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      padding: 20px;
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 16px;
     }
-    #player {
+    .container {
+      max-width: 650px;
       width: 100%;
-      max-width: 900px;
-      aspect-ratio: 16 / 9;
-      border: none;
+    }
+    h1 {
+      font-size: 1.4rem;
+      margin-bottom: 8px;
+    }
+    p {
+      color: #aaa;
+      font-size: 0.95rem;
+    }
+    .button-group {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin: 20px 0;
+    }
+    .yt-btn {
+      display: block;
+      text-align: center;
+      background: #cc0000;
+      color: #ffffff;
+      text-decoration: none;
+      padding: 14px 18px;
+      font-size: 1rem;
+      font-weight: bold;
       border-radius: 8px;
     }
-    .controls {
-      margin-top: 15px;
-      display: flex;
-      gap: 12px;
+    .yt-btn:hover {
+      background: #e60000;
     }
-    button {
-      background: #cc0000;
-      color: #fff;
-      border: none;
-      padding: 10px 18px;
-      font-size: 16px;
-      border-radius: 6px;
-      cursor: pointer;
+    ul {
+      list-style: none;
+      padding: 0;
+      margin-top: 20px;
+    }
+    li {
+      padding: 10px 0;
+      border-bottom: 1px solid #222;
+      font-size: 0.9rem;
+    }
+    li a {
+      color: #3ea6ff;
+      text-decoration: none;
     }
   </style>
 </head>
 <body>
-  <h2>Kanerr / Colaws (&ge; 80k Views) Archive</h2>
-  <div id="player"></div>
-  <div class="controls">
-    <button onclick="prevVideo()">Previous</button>
-    <button onclick="nextVideo()">Next</button>
+  <div class="container">
+    <h1>Kanerr & Colaws Archive (&ge; 80k Views)</h1>
+    <p>Tap a button below to launch these videos directly into the <b>YouTube App</b> with your account/ad-blocker active and continuous autoplay enabled.</p>
+    
+    <div class="button-group">
+      <a class="yt-btn" href="https://www.youtube.com/watch_videos?video_ids=9U4sjuL9io0,I6SjCUYYwXo,b4QIyWWP5CI,vxaqcsXP2KE,r308KfgxV7E,Cdfkq2Nmb3c,rF1c3UUQjXc,2Qn4Noy_yNw,F31Z56Hhbtg,JXQYsnlBjTg,eTE-gFPsTgw,2ERMMSf-Wzw,3VpsbIFYAfY,_R7H3uDXn30,eN1uweydQGg,_kRG9U35me4,oPeXjcK5rFk,6xywXRzBrv4,IuHc-VFJ_jA,6IhBdLpxkO0,CCc2MPdWkaA,nFR07uPzARI,u5yrkNvAJt0,JWZmpa1B0rg,K0BgYGjJJL8,RRvIiH0TI5w,JCkvDQB5iBY,KiebhaEAkso,w_fZcM-BisE,WYjdeKTcOfA,DXgTiUwIlAQ,SoHWqQP6F2o,hFzQQdTS8Yg,uiarvndKeIQ,V875j5nSvrc,fiMwclPhJFo,NjjJVZe99Sw,ggALrwLBnDo,pmYC7aVs4sk,C1Uaog2lmtI,_DyyR-LDoiE,t_tr53kxjk4,h8Egy1u67Jo,bjxtvZ5uXJg,EcJtB81PDz8" target="_blank">▶ Open Part 1 in YouTube App (45 Videos)</a>
+<a class="yt-btn" href="https://www.youtube.com/watch_videos?video_ids=qCr8j7cHtM8,igqg5jl1vvI,ZUuvJOfQUPo,yALrIoiwQVk,Z5xKKFuYowU,0AN9DXxEz_k,hlrwHE3Iico,YoS3xGghQEI,kQiBYuAI3gM,G-J-juycbDk,GhIGLq5xMYo,qOcabjTgPbY,Pd5KtUwfmkE,CVOKJjM6lMU,EQMdwRYOqNw,mA_wvtUlrfs,k6ucBR9jNuc,5ivLTTF6RU4,9ca7ZQoyahk,0C5tNedLotE,fu5AWnTp1Oo,RKUWcVLIHYI,uUJy0-gQrHo,SxlfhbGGg-I,RyMuwmUC2-k,Z2W2Q6sItMo,C8V6DXuqsLQ,mJx6FxvKQtw,PLDFp6D9eN8,HEuAvm_Cmjw,D7id2JKiIB8,ChEEso3BByM,QY5tqUC0dwM,dBvhcaF9sfk,ip_L5OZ0Ues,8HTvacFLVHs,wVV6RZxwOhc,n8-Ps5Vvv4o,qOG4K3dIhpQ,cxUc-l0CBRY,SV1nR3v1KSs,WUK1ePcKafw,xTjwNg5wd6o,FUXEyp-Pxis,vEj0NOxpJc0" target="_blank">▶ Open Part 2 in YouTube App (45 Videos)</a>
+<a class="yt-btn" href="https://www.youtube.com/watch_videos?video_ids=KED3m7RfTms,dQqlDhcl8OU,8ptyjMbimEk,w9hIpEybc00,KDSM6GELqM0,c65jY6Z3zVI,PikF-YGOyd8,CJzAuxmH4fc,eSo10kSWx7c,W4O9NWECViA,JvvWlzUe9yo,Au-ofIgbE-o,4f0av0tIH_Y,9TplwAapv60,BzZcjZENHKo,xwsAMs8g-Fk,VS2sMISoM1U,4_tZusth3FM,P4mPfEQyhs4,4y22YzW5Jy0,xIxWjTv3zqI,iXfrSozWM5o,n_PX1c5e_nI,qlRA2gm_aqs,WrseiY4O988,jWk3W_Ivl2M,nrBpEZq4sGQ,_AgBaOE4UF4,14xvnC96PiM,dBroJgh4BKg,W1LJY0Zqmp4" target="_blank">▶ Open Part 3 in YouTube App (31 Videos)</a>
+    </div>
+
+    <h3>All Archived Videos (121)</h3>
+    <ul>
+      <li><a href="https://www.youtube.com/watch?v=9U4sjuL9io0" target="_blank"><b>[Kanerr]</b> Pops can’t stop saying the N word</a> (4,500,000 views)</li>
+<li><a href="https://www.youtube.com/watch?v=I6SjCUYYwXo" target="_blank"><b>[Kanerr]</b> Squidward smokes Weed</a> (3,400,000 views)</li>
+<li><a href="https://www.youtube.com/watch?v=b4QIyWWP5CI" target="_blank"><b>[Kanerr]</b> Mordecai and Rigby smoke weed (feat. @Colaws)</a> (3,000,000 views)</li>
+<li><a href="https://www.youtube.com/watch?v=vxaqcsXP2KE" target="_blank"><b>[Kanerr]</b> Rick and Morty smoke weed 1 (going to the hood)</a> (2,600,000 views)</li>
+<li><a href="https://www.youtube.com/watch?v=r308KfgxV7E" target="_blank"><b>[Colaws]</b> Mordecai and Rigby Sip Lean (feat. @Amerikanerr)</a> (2,400,000 views)</li>
+<li><a href="https://www.youtube.com/watch?v=Cdfkq2Nmb3c" target="_blank"><b>[Colaws]</b> Harry Potter Smokes Weed</a> (2,000,000 views)</li>
+<li><a href="https://www.youtube.com/watch?v=rF1c3UUQjXc" target="_blank"><b>[Colaws]</b> Spongebob & Squidward Sell Crack (feat. @Amerikanerr)</a> (1,700,000 views)</li>
+<li><a href="https://www.youtube.com/watch?v=2Qn4Noy_yNw" target="_blank"><b>[Colaws]</b> Analyzing Evil: My Stepdad</a> (1,700,000 views)</li>
+<li><a href="https://www.youtube.com/watch?v=F31Z56Hhbtg" target="_blank"><b>[Colaws]</b> Green Goblin Smokes Weed</a> (1,300,000 views)</li>
+<li><a href="https://www.youtube.com/watch?v=JXQYsnlBjTg" target="_blank"><b>[Kanerr]</b> Mordecai and Rigby Pop Percs (ft. @Colaws)</a> (1,200,000 views)</li>
+<li><a href="https://www.youtube.com/watch?v=eTE-gFPsTgw" target="_blank"><b>[Colaws]</b> Yogurt Male Affirmations | Unlock Your Power [ASMR]</a> (1,100,000 views)</li>
+<li><a href="https://www.youtube.com/watch?v=2ERMMSf-Wzw" target="_blank"><b>[Colaws]</b> Carl Wheezer’s Groovy Nightmare [ASMR]</a> (1,100,000 views)</li>
+<li><a href="https://www.youtube.com/watch?v=3VpsbIFYAfY" target="_blank"><b>[Colaws]</b> Squidward Gets Cancelled (feat. @Amerikanerr)</a> (1,000,000 views)</li>
+<li><a href="https://www.youtube.com/watch?v=_R7H3uDXn30" target="_blank"><b>[Colaws]</b> SpongeBob Gets Cancelled</a> (1,000,000 views)</li>
+<li><a href="https://www.youtube.com/watch?v=eN1uweydQGg" target="_blank"><b>[Colaws]</b> Harry Potter Smokes Weed 2 (feat. @Amerikanerr)</a> (1,000,000 views)</li>
+<li><a href="https://www.youtube.com/watch?v=_kRG9U35me4" target="_blank"><b>[Kanerr]</b> Goku hops on Fortnite</a> (964,000 views)</li>
+<li><a href="https://www.youtube.com/watch?v=oPeXjcK5rFk" target="_blank"><b>[Kanerr]</b> Buzz has 0 Swag</a> (952,000 views)</li>
+<li><a href="https://www.youtube.com/watch?v=6xywXRzBrv4" target="_blank"><b>[Kanerr]</b> New niggas in Chicago 😭😭💀 (Squidward)</a> (902,000 views)</li>
+<li><a href="https://www.youtube.com/watch?v=IuHc-VFJ_jA" target="_blank"><b>[Kanerr]</b> Mordecai and Rigby smoke weed 2 (Ft. @Colaws )</a> (894,000 views)</li>
+<li><a href="https://www.youtube.com/watch?v=6IhBdLpxkO0" target="_blank"><b>[Colaws]</b> Squidward Gets Cancelled on Election Night</a> (843,000 views)</li>
+<li><a href="https://www.youtube.com/watch?v=CCc2MPdWkaA" target="_blank"><b>[Kanerr]</b> Rick and Morty smoke weed 2 (Szechuan Wock)</a> (814,000 views)</li>
+<li><a href="https://www.youtube.com/watch?v=nFR07uPzARI" target="_blank"><b>[Colaws]</b> Harry Potter Smokes Weed 4 (FINALE) feat. @Amerikanerr</a> (813,000 views)</li>
+<li><a href="https://www.youtube.com/watch?v=u5yrkNvAJt0" target="_blank"><b>[Colaws]</b> Squilliam over here strokin his squid</a> (737,000 views)</li>
+<li><a href="https://www.youtube.com/watch?v=JWZmpa1B0rg" target="_blank"><b>[Colaws]</b> Harry Potter Smokes Weed 3 (feat. @Amerikaner)</a> (725,000 views)</li>
+<li><a href="https://www.youtube.com/watch?v=K0BgYGjJJL8" target="_blank"><b>[Colaws]</b> Muscleman’s Obliteration (feat. @Amerikaner)</a> (724,000 views)</li>
+<li><a href="https://www.youtube.com/watch?v=RRvIiH0TI5w" target="_blank"><b>[Kanerr]</b> Mordecai and Rigby looksmax</a> (692,000 views)</li>
+<li><a href="https://www.youtube.com/watch?v=JCkvDQB5iBY" target="_blank"><b>[Kanerr]</b> Vegeta pops a perc</a> (683,000 views)</li>
+<li><a href="https://www.youtube.com/watch?v=KiebhaEAkso" target="_blank"><b>[Kanerr]</b> Mordecai sets up an account (feat. @Colaws)</a> (681,000 views)</li>
+<li><a href="https://www.youtube.com/watch?v=w_fZcM-BisE" target="_blank"><b>[Colaws]</b> Green Goblin Smokes Weed 2 (Sequel) (part 2) (cont.)</a> (679,000 views)</li>
+<li><a href="https://www.youtube.com/watch?v=WYjdeKTcOfA" target="_blank"><b>[Kanerr]</b> Zuko gets no bitches (ft. @Colaws)</a> (620,000 views)</li>
+<li><a href="https://www.youtube.com/watch?v=DXgTiUwIlAQ" target="_blank"><b>[Kanerr]</b> Vegeta and Goku go Thug Hunting</a> (613,000 views)</li>
+<li><a href="https://www.youtube.com/watch?v=SoHWqQP6F2o" target="_blank"><b>[Colaws]</b> Mike Ehrmantraut is Down BAD</a> (600,000 views)</li>
+<li><a href="https://www.youtube.com/watch?v=hFzQQdTS8Yg" target="_blank"><b>[Colaws]</b> Benson’s Obliteration (feat. @Amerikaner)  (18+)</a> (557,000 views)</li>
+<li><a href="https://www.youtube.com/watch?v=uiarvndKeIQ" target="_blank"><b>[Colaws]</b> Look at me Hector.</a> (537,000 views)</li>
+<li><a href="https://www.youtube.com/watch?v=V875j5nSvrc" target="_blank"><b>[Colaws]</b> Carl Wheezer’s Groovy Retribution (PART 2) [ASMR]</a> (533,000 views)</li>
+<li><a href="https://www.youtube.com/watch?v=fiMwclPhJFo" target="_blank"><b>[Colaws]</b> Carl Wheezer’s Groovy Revenge (PART 3) [ASMR]</a> (525,000 views)</li>
+<li><a href="https://www.youtube.com/watch?v=NjjJVZe99Sw" target="_blank"><b>[Kanerr]</b> Pops can’t stop saying the N word Part 2 (ft. @Colaws)</a> (513,000 views)</li>
+<li><a href="https://www.youtube.com/watch?v=ggALrwLBnDo" target="_blank"><b>[Kanerr]</b> Anton Chigurh makes Clerk roll up</a> (467,000 views)</li>
+<li><a href="https://www.youtube.com/watch?v=pmYC7aVs4sk" target="_blank"><b>[Colaws]</b> Green Goblin Smokes Weed 3 (Trilogy finale part 1/2)</a> (410,000 views)</li>
+<li><a href="https://www.youtube.com/watch?v=C1Uaog2lmtI" target="_blank"><b>[Kanerr]</b> Squidward gets cancelled for listening to Eminem (ft. @Colaws)</a> (408,000 views)</li>
+<li><a href="https://www.youtube.com/watch?v=_DyyR-LDoiE" target="_blank"><b>[Kanerr]</b> Mordecai and Rigby smoke meth ft. @Colaws</a> (408,000 views)</li>
+<li><a href="https://www.youtube.com/watch?v=t_tr53kxjk4" target="_blank"><b>[Colaws]</b> Rick and Morty Save Israel</a> (406,000 views)</li>
+<li><a href="https://www.youtube.com/watch?v=h8Egy1u67Jo" target="_blank"><b>[Colaws]</b> Prince Charming's W Ohio Rizz feat. @Ghetto Smosh</a> (395,000 views)</li>
+<li><a href="https://www.youtube.com/watch?v=bjxtvZ5uXJg" target="_blank"><b>[Colaws]</b> PLANKTON PLANTED WEED (Original)</a> (390,000 views)</li>
+<li><a href="https://www.youtube.com/watch?v=EcJtB81PDz8" target="_blank"><b>[Colaws]</b> Muscleman Gets Cancelled (feat. @Amerikaner)</a> (386,000 views)</li>
+<li><a href="https://www.youtube.com/watch?v=qCr8j7cHtM8" target="_blank"><b>[Kanerr]</b> Steven gets 0 bitches</a> (376,000 views)</li>
+<li><a href="https://www.youtube.com/watch?v=igqg5jl1vvI" target="_blank"><b>[Colaws]</b> Beavis and Butthead Use Discord</a> (354,000 views)</li>
+<li><a href="https://www.youtube.com/watch?v=ZUuvJOfQUPo" target="_blank"><b>[Colaws]</b> Scooby-Doo Smokes Crack</a> (347,000 views)</li>
+<li><a href="https://www.youtube.com/watch?v=yALrIoiwQVk" target="_blank"><b>[Colaws]</b> Margaret's Dad being actually extremely wholesome for 1 minute and 53 seconds 😍</a> (337,000 views)</li>
+<li><a href="https://www.youtube.com/watch?v=Z5xKKFuYowU" target="_blank"><b>[Kanerr]</b> Muscle Man is GAY</a> (330,000 views)</li>
+<li><a href="https://www.youtube.com/watch?v=0AN9DXxEz_k" target="_blank"><b>[Colaws]</b> Rejected Ford Truck Month Commercial</a> (329,000 views)</li>
+<li><a href="https://www.youtube.com/watch?v=hlrwHE3Iico" target="_blank"><b>[Colaws]</b> Carl Wheezer’s Groovy Halloween [ASMR]</a> (316,000 views)</li>
+<li><a href="https://www.youtube.com/watch?v=YoS3xGghQEI" target="_blank"><b>[Kanerr]</b> Vegeta and Goku prepare for Fat N***a Season</a> (313,000 views)</li>
+<li><a href="https://www.youtube.com/watch?v=kQiBYuAI3gM" target="_blank"><b>[Colaws]</b> Quips Loves Pegging (18+) feat. Amerikaner</a> (312,000 views)</li>
+<li><a href="https://www.youtube.com/watch?v=G-J-juycbDk" target="_blank"><b>[Colaws]</b> Squilliam Epstein Returns</a> (298,000 views)</li>
+<li><a href="https://www.youtube.com/watch?v=GhIGLq5xMYo" target="_blank"><b>[Colaws]</b> Plankton rolls worst blunt ever, asked to leave the Krusty Kush</a> (297,000 views)</li>
+<li><a href="https://www.youtube.com/watch?v=qOcabjTgPbY" target="_blank"><b>[Kanerr]</b> Zuko gets no bitches (PART 2)</a> (292,000 views)</li>
+<li><a href="https://www.youtube.com/watch?v=Pd5KtUwfmkE" target="_blank"><b>[Colaws]</b> Fuck Love Squiddi</a> (285,000 views)</li>
+<li><a href="https://www.youtube.com/watch?v=CVOKJjM6lMU" target="_blank"><b>[Kanerr]</b> Zuko gets no bitches (PART 3) ft. @Colaws</a> (268,000 views)</li>
+<li><a href="https://www.youtube.com/watch?v=EQMdwRYOqNw" target="_blank"><b>[Colaws]</b> Regular Show Dub - Benson Hates Gorillaz (feat. Amerikaner)</a> (257,000 views)</li>
+<li><a href="https://www.youtube.com/watch?v=mA_wvtUlrfs" target="_blank"><b>[Kanerr]</b> Chris Hansen CATCHES OPP LACKING in the HOOD down bad IN 4K</a> (256,000 views)</li>
+<li><a href="https://www.youtube.com/watch?v=k6ucBR9jNuc" target="_blank"><b>[Colaws]</b> Fuck Love Perry</a> (246,000 views)</li>
+<li><a href="https://www.youtube.com/watch?v=5ivLTTF6RU4" target="_blank"><b>[Colaws]</b> Yogurt Male Study (University of Florida)</a> (225,000 views)</li>
+<li><a href="https://www.youtube.com/watch?v=9ca7ZQoyahk" target="_blank"><b>[Colaws]</b> The Regular Fiction Travi$ Scott Fortnite Burger Dub Extravaganza</a> (221,000 views)</li>
+<li><a href="https://www.youtube.com/watch?v=0C5tNedLotE" target="_blank"><b>[Kanerr]</b> Zuko finally gets b!itches</a> (220,000 views)</li>
+<li><a href="https://www.youtube.com/watch?v=fu5AWnTp1Oo" target="_blank"><b>[Colaws]</b> Mordecai and Rigby are Performative Males (feat. @Amerikanerr)</a> (212,000 views)</li>
+<li><a href="https://www.youtube.com/watch?v=RKUWcVLIHYI" target="_blank"><b>[Colaws]</b> Harry Potter Dub - Snape Violates Harry in the Basement of Pogwarts</a> (211,000 views)</li>
+<li><a href="https://www.youtube.com/watch?v=uUJy0-gQrHo" target="_blank"><b>[Kanerr]</b> Mordecai sees Margarets fat milkers</a> (211,000 views)</li>
+<li><a href="https://www.youtube.com/watch?v=SxlfhbGGg-I" target="_blank"><b>[Kanerr]</b> Fuck Love Vegeta (reupload)</a> (205,000 views)</li>
+<li><a href="https://www.youtube.com/watch?v=RyMuwmUC2-k" target="_blank"><b>[Kanerr]</b> Top 10 MOST SIGMA Hobbies A Man Can Have! (Science, Facts, Logic)</a> (184,000 views)</li>
+<li><a href="https://www.youtube.com/watch?v=Z2W2Q6sItMo" target="_blank"><b>[Colaws]</b> Plankton just wants some wings (18+)</a> (181,000 views)</li>
+<li><a href="https://www.youtube.com/watch?v=C8V6DXuqsLQ" target="_blank"><b>[Colaws]</b> Walt and Jesse Sell Weed</a> (176,000 views)</li>
+<li><a href="https://www.youtube.com/watch?v=mJx6FxvKQtw" target="_blank"><b>[Colaws]</b> Hell’s Kitchen Dub - Gordon Gets Cancelled and Calls an Emergency Meeting</a> (174,000 views)</li>
+<li><a href="https://www.youtube.com/watch?v=PLDFp6D9eN8" target="_blank"><b>[Colaws]</b> No Beavis for Old Buttheads</a> (169,000 views)</li>
+<li><a href="https://www.youtube.com/watch?v=HEuAvm_Cmjw" target="_blank"><b>[Kanerr]</b> Hamza explains how to become Chad</a> (166,000 views)</li>
+<li><a href="https://www.youtube.com/watch?v=D7id2JKiIB8" target="_blank"><b>[Kanerr]</b> Rick and Morty go to Ohio</a> (159,000 views)</li>
+<li><a href="https://www.youtube.com/watch?v=ChEEso3BByM" target="_blank"><b>[Kanerr]</b> Benson is underground (ft. @Colaws)</a> (158,000 views)</li>
+<li><a href="https://www.youtube.com/watch?v=QY5tqUC0dwM" target="_blank"><b>[Colaws]</b> Seinfeld Smokes Weed</a> (157,000 views)</li>
+<li><a href="https://www.youtube.com/watch?v=dBvhcaF9sfk" target="_blank"><b>[Kanerr]</b> Squilliams Neo Bussy Dinner</a> (157,000 views)</li>
+<li><a href="https://www.youtube.com/watch?v=ip_L5OZ0Ues" target="_blank"><b>[Colaws]</b> Fuck Love Mista White</a> (155,000 views)</li>
+<li><a href="https://www.youtube.com/watch?v=8HTvacFLVHs" target="_blank"><b>[Kanerr]</b> Mordecai wonders if that ass can fart</a> (154,000 views)</li>
+<li><a href="https://www.youtube.com/watch?v=wVV6RZxwOhc" target="_blank"><b>[Colaws]</b> ‘I Like Girls’ but it’s accurate to twitch streamers</a> (153,000 views)</li>
+<li><a href="https://www.youtube.com/watch?v=n8-Ps5Vvv4o" target="_blank"><b>[Colaws]</b> Butthead's New Art Comission</a> (150,000 views)</li>
+<li><a href="https://www.youtube.com/watch?v=qOG4K3dIhpQ" target="_blank"><b>[Colaws]</b> Saul Goodman Trolls Howard</a> (132,000 views)</li>
+<li><a href="https://www.youtube.com/watch?v=cxUc-l0CBRY" target="_blank"><b>[Colaws]</b> KID NAMED FINGER IS CANON CONFIRMED</a> (129,000 views)</li>
+<li><a href="https://www.youtube.com/watch?v=SV1nR3v1KSs" target="_blank"><b>[Colaws]</b> Walter White Smokes Weed</a> (129,000 views)</li>
+<li><a href="https://www.youtube.com/watch?v=WUK1ePcKafw" target="_blank"><b>[Kanerr]</b> Vegeta enters his winter arc</a> (126,000 views)</li>
+<li><a href="https://www.youtube.com/watch?v=xTjwNg5wd6o" target="_blank"><b>[Colaws]</b> Wite ppl when the YouTube survey pops up</a> (124,000 views)</li>
+<li><a href="https://www.youtube.com/watch?v=FUXEyp-Pxis" target="_blank"><b>[Colaws]</b> Hell’s Kitchen Dub - Gordon Drugs His Customers and Instills Sharia Law</a> (124,000 views)</li>
+<li><a href="https://www.youtube.com/watch?v=vEj0NOxpJc0" target="_blank"><b>[Colaws]</b> CallMeCarson’s Grooming DM’s Dramatically Read as Carl Wheezer and Squilliam Fancyson (STREAM CLIP)</a> (124,000 views)</li>
+<li><a href="https://www.youtube.com/watch?v=KED3m7RfTms" target="_blank"><b>[Colaws]</b> HOW THA GRINCH SMOKED KUSHMAS feat. @GhettoSmosh (PART 1)</a> (120,000 views)</li>
+<li><a href="https://www.youtube.com/watch?v=dQqlDhcl8OU" target="_blank"><b>[Kanerr]</b> “Rock” enthusiasts VS Trap$tars</a> (115,000 views)</li>
+<li><a href="https://www.youtube.com/watch?v=8ptyjMbimEk" target="_blank"><b>[Colaws]</b> Fuck Love Squiddi 2</a> (114,000 views)</li>
+<li><a href="https://www.youtube.com/watch?v=w9hIpEybc00" target="_blank"><b>[Colaws]</b> The Making of ‘Mordecai and Rigby Sip Lean’</a> (113,000 views)</li>
+<li><a href="https://www.youtube.com/watch?v=KDSM6GELqM0" target="_blank"><b>[Colaws]</b> To Pimp A Butterfly but it's Regular Show - PART 1 (Tracks 1-4)</a> (107,000 views)</li>
+<li><a href="https://www.youtube.com/watch?v=c65jY6Z3zVI" target="_blank"><b>[Colaws]</b> Mickey's Cucumber [STREAM CLIP]</a> (106,000 views)</li>
+<li><a href="https://www.youtube.com/watch?v=PikF-YGOyd8" target="_blank"><b>[Colaws]</b> Regular Show Dub - Muscleman Unlocks Sissy Hypnosis Powers</a> (106,000 views)</li>
+<li><a href="https://www.youtube.com/watch?v=CJzAuxmH4fc" target="_blank"><b>[Kanerr]</b> Mordecai Simping</a> (106,000 views)</li>
+<li><a href="https://www.youtube.com/watch?v=eSo10kSWx7c" target="_blank"><b>[Colaws]</b> Hell’s Kitchen Dub</a> (104,000 views)</li>
+<li><a href="https://www.youtube.com/watch?v=W4O9NWECViA" target="_blank"><b>[Kanerr]</b> Joe Rogan PODCAST w/ Rick Sanchez and Jordan Peterson</a> (104,000 views)</li>
+<li><a href="https://www.youtube.com/watch?v=JvvWlzUe9yo" target="_blank"><b>[Kanerr]</b> [STREAM CLIP] Pops sings Hot N***a by Bobby Shmurda (w/ @Colaws)</a> (104,000 views)</li>
+<li><a href="https://www.youtube.com/watch?v=Au-ofIgbE-o" target="_blank"><b>[Kanerr]</b> Chinese Joe Rogan show w/ Al-Xiao Jong</a> (103,000 views)</li>
+<li><a href="https://www.youtube.com/watch?v=4f0av0tIH_Y" target="_blank"><b>[Kanerr]</b> Mordecai sexually harasses Benson</a> (102,000 views)</li>
+<li><a href="https://www.youtube.com/watch?v=9TplwAapv60" target="_blank"><b>[Kanerr]</b> RIOT SHIELD, IM A PUSSY AND I USE RIOT SHIELD</a> (102,000 views)</li>
+<li><a href="https://www.youtube.com/watch?v=BzZcjZENHKo" target="_blank"><b>[Kanerr]</b> Hank took the Wock to Poland</a> (101,000 views)</li>
+<li><a href="https://www.youtube.com/watch?v=xwsAMs8g-Fk" target="_blank"><b>[Kanerr]</b> Hood Wars: The Weed Wars (Episode 1)</a> (99,000 views)</li>
+<li><a href="https://www.youtube.com/watch?v=VS2sMISoM1U" target="_blank"><b>[Colaws]</b> BETTER CALL SOLE</a> (98,000 views)</li>
+<li><a href="https://www.youtube.com/watch?v=4_tZusth3FM" target="_blank"><b>[Colaws]</b> Jesse Gets Grounded for a Month</a> (98,000 views)</li>
+<li><a href="https://www.youtube.com/watch?v=P4mPfEQyhs4" target="_blank"><b>[Colaws]</b> Carl Wheezer’s Groovy Return [ASMR]</a> (96,000 views)</li>
+<li><a href="https://www.youtube.com/watch?v=4y22YzW5Jy0" target="_blank"><b>[Kanerr]</b> Die4carl</a> (95,000 views)</li>
+<li><a href="https://www.youtube.com/watch?v=xIxWjTv3zqI" target="_blank"><b>[Colaws]</b> Invincible Gets Cancelled (18+) feat. @Amerikanerr</a> (90,000 views)</li>
+<li><a href="https://www.youtube.com/watch?v=iXfrSozWM5o" target="_blank"><b>[Colaws]</b> Lord of the Wings: The Fellowship of the Wing (feat. @BeefFishstick)</a> (90,000 views)</li>
+<li><a href="https://www.youtube.com/watch?v=n_PX1c5e_nI" target="_blank"><b>[Kanerr]</b> Fuck Love Original</a> (90,000 views)</li>
+<li><a href="https://www.youtube.com/watch?v=qlRA2gm_aqs" target="_blank"><b>[Kanerr]</b> Dr. Fauci (Squilliam remix)</a> (88,000 views)</li>
+<li><a href="https://www.youtube.com/watch?v=WrseiY4O988" target="_blank"><b>[Colaws]</b> Benson won’t stop texting me about endorsing Trump</a> (87,000 views)</li>
+<li><a href="https://www.youtube.com/watch?v=jWk3W_Ivl2M" target="_blank"><b>[Colaws]</b> FIFTY THOUSAND SUBSCRIBERS</a> (86,000 views)</li>
+<li><a href="https://www.youtube.com/watch?v=nrBpEZq4sGQ" target="_blank"><b>[Kanerr]</b> Squilliam - Michigan</a> (85,000 views)</li>
+<li><a href="https://www.youtube.com/watch?v=_AgBaOE4UF4" target="_blank"><b>[Colaws]</b> BITCH I’M BACK OUT MY COMA</a> (83,000 views)</li>
+<li><a href="https://www.youtube.com/watch?v=14xvnC96PiM" target="_blank"><b>[Colaws]</b> MILF SLAYR (Daft Punk Improvement) (HATERS BTFO) w/ Lyrics</a> (83,000 views)</li>
+<li><a href="https://www.youtube.com/watch?v=dBroJgh4BKg" target="_blank"><b>[Kanerr]</b> I pooped myself. (Vol 2)</a> (83,000 views)</li>
+<li><a href="https://www.youtube.com/watch?v=W1LJY0Zqmp4" target="_blank"><b>[Colaws]</b> Green Goblin Smokes Weed 3 (FINALE) feat. @Amerikanerr</a> (81,000 views)</li>
+    </ul>
   </div>
-
-  <script src="https://www.youtube.com/iframe_api"></script>
-  <script>
-    const videoIds = ["9U4sjuL9io0", "I6SjCUYYwXo", "b4QIyWWP5CI", "vxaqcsXP2KE", "r308KfgxV7E", "Cdfkq2Nmb3c", "rF1c3UUQjXc", "2Qn4Noy_yNw", "F31Z56Hhbtg", "JXQYsnlBjTg", "eTE-gFPsTgw", "2ERMMSf-Wzw", "3VpsbIFYAfY", "_R7H3uDXn30", "eN1uweydQGg", "_kRG9U35me4", "oPeXjcK5rFk", "6xywXRzBrv4", "IuHc-VFJ_jA", "6IhBdLpxkO0", "CCc2MPdWkaA", "nFR07uPzARI", "u5yrkNvAJt0", "JWZmpa1B0rg", "K0BgYGjJJL8", "RRvIiH0TI5w", "JCkvDQB5iBY", "KiebhaEAkso", "w_fZcM-BisE", "WYjdeKTcOfA", "DXgTiUwIlAQ", "SoHWqQP6F2o", "hFzQQdTS8Yg", "uiarvndKeIQ", "V875j5nSvrc", "fiMwclPhJFo", "NjjJVZe99Sw", "ggALrwLBnDo", "pmYC7aVs4sk", "C1Uaog2lmtI", "_DyyR-LDoiE", "t_tr53kxjk4", "h8Egy1u67Jo", "bjxtvZ5uXJg", "EcJtB81PDz8", "qCr8j7cHtM8", "igqg5jl1vvI", "ZUuvJOfQUPo", "yALrIoiwQVk", "Z5xKKFuYowU", "0AN9DXxEz_k", "hlrwHE3Iico", "YoS3xGghQEI", "kQiBYuAI3gM", "G-J-juycbDk", "GhIGLq5xMYo", "qOcabjTgPbY", "Pd5KtUwfmkE", "CVOKJjM6lMU", "EQMdwRYOqNw", "mA_wvtUlrfs", "k6ucBR9jNuc", "5ivLTTF6RU4", "9ca7ZQoyahk", "0C5tNedLotE", "fu5AWnTp1Oo", "RKUWcVLIHYI", "uUJy0-gQrHo", "SxlfhbGGg-I", "RyMuwmUC2-k", "Z2W2Q6sItMo", "C8V6DXuqsLQ", "mJx6FxvKQtw", "PLDFp6D9eN8", "HEuAvm_Cmjw", "D7id2JKiIB8", "ChEEso3BByM", "QY5tqUC0dwM", "dBvhcaF9sfk", "ip_L5OZ0Ues", "8HTvacFLVHs", "wVV6RZxwOhc", "n8-Ps5Vvv4o", "qOG4K3dIhpQ", "cxUc-l0CBRY", "SV1nR3v1KSs", "WUK1ePcKafw", "xTjwNg5wd6o", "FUXEyp-Pxis", "vEj0NOxpJc0", "KED3m7RfTms", "dQqlDhcl8OU", "8ptyjMbimEk", "w9hIpEybc00", "KDSM6GELqM0", "c65jY6Z3zVI", "PikF-YGOyd8", "CJzAuxmH4fc", "eSo10kSWx7c", "W4O9NWECViA", "JvvWlzUe9yo", "Au-ofIgbE-o", "4f0av0tIH_Y", "9TplwAapv60", "BzZcjZENHKo", "xwsAMs8g-Fk", "VS2sMISoM1U", "4_tZusth3FM", "P4mPfEQyhs4", "4y22YzW5Jy0", "xIxWjTv3zqI", "iXfrSozWM5o", "n_PX1c5e_nI", "qlRA2gm_aqs", "WrseiY4O988", "jWk3W_Ivl2M", "nrBpEZq4sGQ", "_AgBaOE4UF4", "14xvnC96PiM", "dBroJgh4BKg", "W1LJY0Zqmp4"];
-    let currentIndex = 0;
-    let player;
-
-    function onYouTubeIframeAPIReady() {
-      player = new YT.Player('player', {
-        videoId: videoIds[0],
-        playerVars: { 'autoplay': 1, 'playsinline': 1 },
-        events: {
-          'onReady': (e) => e.target.playVideo(),
-          'onStateChange': onPlayerStateChange
-        }
-      });
-    }
-
-    function onPlayerStateChange(event) {
-      // YT.PlayerState.ENDED is 0: advances immediately to next video
-      if (event.data === 0) {
-        nextVideo();
-      }
-    }
-
-    function nextVideo() {
-      currentIndex = (currentIndex + 1) % videoIds.length;
-      player.loadVideoById(videoIds[currentIndex]);
-    }
-
-    function prevVideo() {
-      currentIndex = (currentIndex - 1 + videoIds.length) % videoIds.length;
-      player.loadVideoById(videoIds[currentIndex]);
-    }
-  </script>
 </body>
 </html>
