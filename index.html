@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kanerr & Colaws Autoplay</title>
+  <style>
+    body {
+      margin: 0;
+      background: #0f0f0f;
+      color: #fff;
+      font-family: sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 16px;
+    }
+    #player {
+      width: 100%;
+      max-width: 900px;
+      aspect-ratio: 16 / 9;
+      border: none;
+      border-radius: 8px;
+    }
+    .controls {
+      margin-top: 15px;
+      display: flex;
+      gap: 12px;
+    }
+    button {
+      background: #cc0000;
+      color: #fff;
+      border: none;
+      padding: 10px 18px;
+      font-size: 16px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h2>Kanerr / Colaws (&ge; 80k Views) Archive</h2>
+  <div id="player"></div>
+  <div class="controls">
+    <button onclick="prevVideo()">Previous</button>
+    <button onclick="nextVideo()">Next</button>
+  </div>
+
+  <script src="https://www.youtube.com/iframe_api"></script>
+  <script>
+    const videoIds = ["9U4sjuL9io0", "I6SjCUYYwXo", "b4QIyWWP5CI", "vxaqcsXP2KE", "r308KfgxV7E", "Cdfkq2Nmb3c", "rF1c3UUQjXc", "2Qn4Noy_yNw", "F31Z56Hhbtg", "JXQYsnlBjTg", "eTE-gFPsTgw", "2ERMMSf-Wzw", "3VpsbIFYAfY", "_R7H3uDXn30", "eN1uweydQGg", "_kRG9U35me4", "oPeXjcK5rFk", "6xywXRzBrv4", "IuHc-VFJ_jA", "6IhBdLpxkO0", "CCc2MPdWkaA", "nFR07uPzARI", "u5yrkNvAJt0", "JWZmpa1B0rg", "K0BgYGjJJL8", "RRvIiH0TI5w", "JCkvDQB5iBY", "KiebhaEAkso", "w_fZcM-BisE", "WYjdeKTcOfA", "DXgTiUwIlAQ", "SoHWqQP6F2o", "hFzQQdTS8Yg", "uiarvndKeIQ", "V875j5nSvrc", "fiMwclPhJFo", "NjjJVZe99Sw", "ggALrwLBnDo", "pmYC7aVs4sk", "C1Uaog2lmtI", "_DyyR-LDoiE", "t_tr53kxjk4", "h8Egy1u67Jo", "bjxtvZ5uXJg", "EcJtB81PDz8", "qCr8j7cHtM8", "igqg5jl1vvI", "ZUuvJOfQUPo", "yALrIoiwQVk", "Z5xKKFuYowU", "0AN9DXxEz_k", "hlrwHE3Iico", "YoS3xGghQEI", "kQiBYuAI3gM", "G-J-juycbDk", "GhIGLq5xMYo", "qOcabjTgPbY", "Pd5KtUwfmkE", "CVOKJjM6lMU", "EQMdwRYOqNw", "mA_wvtUlrfs", "k6ucBR9jNuc", "5ivLTTF6RU4", "9ca7ZQoyahk", "0C5tNedLotE", "fu5AWnTp1Oo", "RKUWcVLIHYI", "uUJy0-gQrHo", "SxlfhbGGg-I", "RyMuwmUC2-k", "Z2W2Q6sItMo", "C8V6DXuqsLQ", "mJx6FxvKQtw", "PLDFp6D9eN8", "HEuAvm_Cmjw", "D7id2JKiIB8", "ChEEso3BByM", "QY5tqUC0dwM", "dBvhcaF9sfk", "ip_L5OZ0Ues", "8HTvacFLVHs", "wVV6RZxwOhc", "n8-Ps5Vvv4o", "qOG4K3dIhpQ", "cxUc-l0CBRY", "SV1nR3v1KSs", "WUK1ePcKafw", "xTjwNg5wd6o", "FUXEyp-Pxis", "vEj0NOxpJc0", "KED3m7RfTms", "dQqlDhcl8OU", "8ptyjMbimEk", "w9hIpEybc00", "KDSM6GELqM0", "c65jY6Z3zVI", "PikF-YGOyd8", "CJzAuxmH4fc", "eSo10kSWx7c", "W4O9NWECViA", "JvvWlzUe9yo", "Au-ofIgbE-o", "4f0av0tIH_Y", "9TplwAapv60", "BzZcjZENHKo", "xwsAMs8g-Fk", "VS2sMISoM1U", "4_tZusth3FM", "P4mPfEQyhs4", "4y22YzW5Jy0", "xIxWjTv3zqI", "iXfrSozWM5o", "n_PX1c5e_nI", "qlRA2gm_aqs", "WrseiY4O988", "jWk3W_Ivl2M", "nrBpEZq4sGQ", "_AgBaOE4UF4", "14xvnC96PiM", "dBroJgh4BKg", "W1LJY0Zqmp4"];
+    let currentIndex = 0;
+    let player;
+
+    function onYouTubeIframeAPIReady() {
+      player = new YT.Player('player', {
+        videoId: videoIds[0],
+        playerVars: { 'autoplay': 1, 'playsinline': 1 },
+        events: {
+          'onReady': (e) => e.target.playVideo(),
+          'onStateChange': onPlayerStateChange
+        }
+      });
+    }
+
+    function onPlayerStateChange(event) {
+      // YT.PlayerState.ENDED is 0: advances immediately to next video
+      if (event.data === 0) {
+        nextVideo();
+      }
+    }
+
+    function nextVideo() {
+      currentIndex = (currentIndex + 1) % videoIds.length;
+      player.loadVideoById(videoIds[currentIndex]);
+    }
+
+    function prevVideo() {
+      currentIndex = (currentIndex - 1 + videoIds.length) % videoIds.length;
+      player.loadVideoById(videoIds[currentIndex]);
+    }
+  </script>
+</body>
+</html>
